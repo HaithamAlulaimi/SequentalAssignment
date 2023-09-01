@@ -1,19 +1,19 @@
 package core.pages;
 
-
-import constants_enums.Credentials;
 import core.BasePage;
 import core.common.Actions;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class AddUserPage extends BasePage {
+public class BuzzPage extends BasePage {
 
-    public AddUserPage(WebDriver driver) {
+
+    public BuzzPage(WebDriver driver) {
         super(driver);
+
     }
 
-    public static void validAddUser(WebDriver driver) throws InterruptedException {
+    public static void validBuzzPost(WebDriver driver) throws InterruptedException {
         Actions actions = new Actions(driver);
 
         // Locate and click the 'Admin' section
@@ -69,5 +69,6 @@ public class AddUserPage extends BasePage {
 
         //assert from successfully message is appeared
         Assert.assertEquals(actions.findElementByXpath("/html/body/div/div[2]/div/div[1]/div[2]/p[1]").getText(), "Success");
+
     }
 }

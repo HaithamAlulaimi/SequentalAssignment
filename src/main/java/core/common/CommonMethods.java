@@ -1,29 +1,26 @@
-package Factory;
+package core.common;
 
 import core.BasePage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.Arrays;
 
-import static core.common.ConfigKey.BASE_URL;
+public class CommonMethods extends BasePage {
 
-public class PageFactory extends BasePage {
-    static WebDriver driver;
+    WebDriverWait wait;
+    WebDriver driver;
 
-    public PageFactory(WebDriver driver) {
+    public CommonMethods(WebDriver driver) {
         super(driver);
-        PageFactory.driver = driver;
     }
 
-    public static void invokeBrowser(WebDriver driver) {
-        driver.manage().window().maximize();
-        driver.navigate().to(BASE_URL.getKey());
-    }
 
     public static void waitByThreadSleep(int seconds) {
         try {
-            Thread.sleep(seconds * 1000);
+            Thread.sleep(seconds*1000);
         } catch (InterruptedException ex) {
             System.err.println(
                     "Error upon calling waitByThreadSleep: line 59, WebCommon.java: "

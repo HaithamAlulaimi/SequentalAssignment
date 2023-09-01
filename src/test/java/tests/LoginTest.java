@@ -1,11 +1,13 @@
 package tests;
 
+import Factory.PageFactory;
 import constants_enums.Credentials;
 import core.common.Actions;
 import core.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -18,17 +20,21 @@ public class LoginTest {
 
     WebDriver driver;
 
-
-
-
     @BeforeMethod
     public void beforeMethod() {
         driver = new ChromeDriver();
         login = new LoginPage(driver);
         actions = new Actions(driver);
         softAssert = new SoftAssert();
-        actions.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        PageFactory.invokeBrowser(driver);
     }
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        // It ensures the browser is closed after each test method
+        driver.quit();
+    }
+
 
     @Test(description = "Sign In with valid creds", priority = 1)
     public void signInWithValidCreds() {
@@ -46,10 +52,7 @@ public class LoginTest {
         Assert.assertTrue(actions.findElementByXpath("//img[@class='oxd-userdropdown-img']").isDisplayed());
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"));
     }
 
     @Test(description = "Sign In with invalid username", priority = 2)
@@ -71,11 +74,9 @@ public class LoginTest {
         Assert.assertEquals(actions.findElementByXpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']").getText(), "Invalid credentials");
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
     }
+
 
     @Test(description = "Sign In with invalid Password", priority = 3)
     public void signInWithInValidPassword() {
@@ -96,11 +97,9 @@ public class LoginTest {
         Assert.assertEquals(actions.findElementByXpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']").getText(), "Invalid credentials");
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
     }
+
 
     @Test(description = "Sign In with invalid Username and Password", priority = 4)
     public void signInWithInValidUserNameAndPassword() {
@@ -121,11 +120,9 @@ public class LoginTest {
         Assert.assertEquals(actions.findElementByXpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']").getText(), "Invalid credentials");
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
     }
+
 
     @Test(description = "signIn With Missing UserName", priority = 5)
     public void signInWithMissingUserName() {
@@ -146,10 +143,7 @@ public class LoginTest {
         Assert.assertEquals(actions.findElementByXpath("//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']").getText(), "Required");
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
     }
 
 
@@ -172,11 +166,9 @@ public class LoginTest {
         Assert.assertEquals(actions.findElementByXpath("//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']").getText(), "Required");
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
     }
+
 
     @Test(description = "signIn With Missing username and Password", priority = 7)
     public void signInWithMissingUserNameAndPassword() {
@@ -203,11 +195,9 @@ public class LoginTest {
         Assert.assertEquals(actions.findElementByXpath("//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']").getText(), "Required");
 
         // Verify that the current URL matches the expected dashboard URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Close the browser session and quit the WebDriver
-        actions.quit();
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
     }
+
 
     @Test(description = "Verify that forget password button redirect user to the Forget password page", priority = 8)
     public void clickOnForgetPasswordButton() {
@@ -219,9 +209,7 @@ public class LoginTest {
         Assert.assertTrue(actions.findElementByXpath("//button[@type='submit']").isDisplayed());
 
         // Verify that the current URL matches the expected Password Reset Code URL
-        Assert.assertEquals(actions.currentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode");
+        Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode"));
 
-        // Close the browser session and quit the WebDriver
-        actions.quit();
     }
 }

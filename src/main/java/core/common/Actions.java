@@ -27,7 +27,6 @@ public class Actions extends BasePage {
         driver.get(url);
         wait.until(webDriver -> {
             String readyState = ((JavascriptExecutor) driver).executeScript("return document.readyState").toString();
-            System.out.println("Ready State: " + readyState);
             return "complete".equalsIgnoreCase(readyState);
         });
     }

@@ -10,15 +10,20 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/Factory/PageFactory.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/constants_enums/Credentials.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/core/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/common/CommonMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/common/ConfigKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/pages/AddLeavePage.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/core/pages/AddUserPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/pages/BuzzModulePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/pages/BuzzPage.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/core/pages/LogoutPage.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/core/pages/MyInfoPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AddLeaveTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/tests/AddUserTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/tests/BuzzTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/tests/LogoutTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/tests/MyInfoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TheFullScenarioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" beforeDir="false" />
@@ -115,6 +120,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/BaseApi.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/common/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/common/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/pages/LoginPage.java" afterDir="false" />
@@ -164,8 +170,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.tests">
-    <configuration name="BuzzTest.AddValidUser" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TheFullScenarioTest.TestingTheFullScenario">
+    <configuration name="AddUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SequentalAssignment" />
       <extension name="coverage">
         <pattern>
@@ -174,17 +180,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BuzzTest" />
-      <option name="METHOD_NAME" value="AddValidUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddUserTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyInfoTest.AddAttachmentsToTheImmigrationSection" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
+    <configuration name="AddUserTest.addSystemUserWithoutUserName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SequentalAssignment" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -192,7 +197,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MyInfoTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddUserTest" />
+      <option name="METHOD_NAME" value="addSystemUserWithoutUserName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SequentalAssignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheFullScenarioTest.AddAttachmentsToTheImmigrationSection" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SequentalAssignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TheFullScenarioTest" />
       <option name="METHOD_NAME" value="AddAttachmentsToTheImmigrationSection" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -201,7 +241,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyInfoTest.AddAttachmentsToTheImmigrationSection" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TheFullScenarioTest.TestingTheFullScenario" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SequentalAssignment" />
       <extension name="coverage">
         <pattern>
@@ -210,43 +250,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MyInfoTest" />
-      <option name="METHOD_NAME" value="AddAttachmentsToTheImmigrationSection" />
+      <option name="MAIN_CLASS_NAME" value="tests.TheFullScenarioTest" />
+      <option name="METHOD_NAME" value="TestingTheFullScenario" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyInfoTest.AddValidUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MyInfoTest" />
-      <option name="METHOD_NAME" value="AddValidUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SequentalAssignment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
@@ -255,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.BuzzTest.AddValidUser" />
-        <item itemvalue="TestNG.MyInfoTest.AddAttachmentsToTheImmigrationSection (1)" />
-        <item itemvalue="TestNG.MyInfoTest.AddAttachmentsToTheImmigrationSection" />
-        <item itemvalue="TestNG.MyInfoTest.AddValidUser" />
+        <item itemvalue="TestNG.TheFullScenarioTest.TestingTheFullScenario" />
+        <item itemvalue="TestNG.TheFullScenarioTest.AddAttachmentsToTheImmigrationSection" />
+        <item itemvalue="TestNG.AddUserTest.addSystemUserWithoutUserName" />
+        <item itemvalue="TestNG.AddUserTest" />
+        <item itemvalue="TestNG.LoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -296,31 +302,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Create Chrome WebDriver. &#10;- Build base classes." />
     <option name="LAST_COMMIT_MESSAGE" value="- Create Chrome WebDriver. &#10;- Build base classes." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/LoginTest.java</url>
-          <line>159</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/AddUserTest.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/MyInfoTest.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/BuzzTest.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

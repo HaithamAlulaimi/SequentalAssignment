@@ -7,14 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class LoginPage extends BasePage {
-    static WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         super(driver);
-        LoginPage.driver = driver;
     }
 
-    public static void ValidLogin() {
+    public static void ValidLogin(WebDriver driver) {
         Actions actions = new Actions(driver);
 
         actions.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
