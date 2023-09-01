@@ -26,3 +26,23 @@ Before you begin, ensure you have the following installed:
 
    ```bash
    git clone https://github.com/HaithamAlulaimi/SequentalAssignment
+
+   Open the Project in your IDE:
+
+2. Launch your preferred Integrated Development Environment (IDE), such as IntelliJ IDEA, Eclipse, or Visual Studio Code.
+Use the IDE's "Open Project" or "Import" feature to open the project directory that you just cloned.
+Run the Test Cases:
+
+Once the project is open in your IDE, locate the test classes or test suites that contain your Selenium test cases.
+
+Right-click on a test class or test suite file and select "Run" or "Run As" (depending on your IDE).
+
+## Thank You
+
+I would like to extend my sincere gratitude to SequenTal for the opportunity to be interviewed and for entrusting me with this assignment. It has been a valuable experience to work on this project, and I appreciate the chance to apply and enhance my skills in the field of Automation testing.
+
+I look forward to further collaboration and the possibility of contributing to sequenTal's mission and goals. Thank you once again for this opportunity.
+
+Best regards,
+
+Haitham Alulaimi
