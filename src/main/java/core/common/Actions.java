@@ -61,6 +61,13 @@ public class Actions extends BasePage {
 
     public WebElement findElementByClassName(String className) {
 
+
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(className)));
+        } catch (Exception e) {
+            e.printStackTrace();
+            driver.close();
+        }
         return driver.findElement(By.className(className));
     }
 

@@ -1,5 +1,6 @@
 package tests;
 
+import Factory.PageFactory;
 import core.BasePage;
 import core.common.Actions;
 import core.pages.BuzzPage;
@@ -28,6 +29,7 @@ public class BuzzTest {
         buzzModulePage = new BuzzPage(driver);
         loginpage = new LoginPage(driver);
         actions = new Actions(driver);
+        PageFactory.invokeBrowser(driver);
     }
 
     @AfterMethod(alwaysRun = true)
@@ -43,7 +45,7 @@ public class BuzzTest {
         LoginPage.ValidLogin(driver);
 
         // Locate and click the 'Buzz' section
-        actions.findElementByXpath("/html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[12]/a/span").click();
+        actions.findElementByXpath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[12]").click();
         Assert.assertTrue(actions.expectedUrl("https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz"));
 
         // assert the 'UserRole' list is displayed
@@ -60,11 +62,10 @@ public class BuzzTest {
         Assert.assertEquals(actions.findElementByXpath("/html/body/div/div[2]/div/div[1]/div[2]/p[1]").getText(), "Success");
 
 
-        // Close the browser session and quit the WebDriver
+        // Get all post to assert on them
         List<WebElement> test = driver.findElements(By.className("orangehrm-buzz-post-body-text"));
 
 
-        test.size();
         if (!test.isEmpty()) {
 
             for (WebElement element : test) {

@@ -2,6 +2,7 @@ package core.pages;
 
 import core.BasePage;
 import core.common.Actions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -28,7 +29,7 @@ public class MyInfoPage extends BasePage {
 
         // Locate and click the 'Add' Button
         actions.findElementByXpath("/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/div/button").click();
-        actions.findElementByClassName("oxd-file-input").sendKeys(filePath);
+        driver.findElement(By.className("oxd-file-input")).sendKeys(filePath);
 
         // Locate and click the 'save' button
         actions.findElementByXpath("/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div/form/div[3]/button[2]").click();

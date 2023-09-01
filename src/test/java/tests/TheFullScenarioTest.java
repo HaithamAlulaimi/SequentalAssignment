@@ -1,5 +1,6 @@
 package tests;
 
+import Factory.PageFactory;
 import core.common.Actions;
 import core.pages.*;
 import org.apache.commons.logging.Log;
@@ -25,7 +26,7 @@ public class TheFullScenarioTest {
         addUser=new AddUserPage(driver);
         actions = new Actions(driver);
         softAssert = new SoftAssert();
-        actions.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        PageFactory.invokeBrowser(driver);
     }
 
     @AfterMethod(alwaysRun = true)
@@ -34,12 +35,14 @@ public class TheFullScenarioTest {
         driver.quit();
     }
 
-    @Test(description = "Add Info Page", priority = 1)
+    @Test(description = "TestingTheFullScenario", priority = 1)
     public void TestingTheFullScenario() throws InterruptedException {
         LoginPage.ValidLogin(driver);
         AddUserPage.validAddUser(driver);
         MyInfoPage.validAddImmigrationAttachment(driver);
+        AddLeavePage.validAddUser(driver);
         BuzzPage.validBuzzPost(driver);
+
         LogoutPage.ValidLogout(driver);
     }
 }

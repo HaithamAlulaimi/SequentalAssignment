@@ -1,6 +1,7 @@
 package tests;
 
 
+import Factory.PageFactory;
 import core.BasePage;
 import core.common.Actions;
 import core.common.CommonMethods;
@@ -25,6 +26,8 @@ public class AddUserTest {
         driver = new ChromeDriver();
         loginpage = new LoginPage(driver);
         actions = new Actions(driver);
+        PageFactory.invokeBrowser(driver);
+
     }
 
     @AfterMethod(alwaysRun = true)

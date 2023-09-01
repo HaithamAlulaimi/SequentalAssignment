@@ -1,7 +1,9 @@
 package tests;
 
+import Factory.PageFactory;
 import core.common.Actions;
 import core.pages.LoginPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -21,6 +23,8 @@ public class MyInfoTest {
         driver = new ChromeDriver();
         loginpage = new LoginPage(driver);
         actions = new Actions(driver);
+        PageFactory.invokeBrowser(driver);
+
     }
 
     @AfterMethod(alwaysRun = true)
@@ -46,7 +50,7 @@ public class MyInfoTest {
 
         // Locate and click the 'Add' Button
         actions.findElementByXpath("/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/div/button").click();
-        actions.findElementByClassName("oxd-file-input").sendKeys(filePath);
+        driver.findElement(By.className("oxd-file-input")).sendKeys(filePath);
 
         // Locate and click the 'save' button
         actions.findElementByXpath("/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div/form/div[3]/button[2]").click();

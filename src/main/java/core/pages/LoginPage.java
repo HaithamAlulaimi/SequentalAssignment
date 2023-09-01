@@ -15,7 +15,6 @@ public class LoginPage extends BasePage {
     public static void ValidLogin(WebDriver driver) {
         Actions actions = new Actions(driver);
 
-        actions.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         // Locate the 'Username' input field and enter 'Admin' as the username
         actions.findElementByXpath("//input[@placeholder='Username']").sendKeys(Credentials.Valid_UserName.getKey());
 

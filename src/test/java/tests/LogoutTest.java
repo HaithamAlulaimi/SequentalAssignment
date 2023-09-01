@@ -1,8 +1,11 @@
 package tests;
 
+import Factory.PageFactory;
 import core.common.Actions;
 import core.pages.BuzzPage;
 import core.pages.LoginPage;
+import core.pages.LogoutPage;
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -14,16 +17,16 @@ public class LogoutTest {
 
     WebDriver driver;
     LoginPage loginpage;
-    BuzzPage buzzModulePage;
     Actions actions;
 
 
     @BeforeMethod
     public void beforeMethod() {
         driver = new ChromeDriver();
-        buzzModulePage = new BuzzPage(driver);
         loginpage = new LoginPage(driver);
         actions = new Actions(driver);
+        PageFactory.invokeBrowser(driver);
+
     }
 
 
@@ -42,7 +45,7 @@ public class LogoutTest {
         actions.findElementByXpath("//p[@class='oxd-userdropdown-name']").click();
         actions.findElementByXpath("//a[normalize-space()='Logout']").click();
 
-        String CookieAfterLogout = driver.manage().getCookieNamed("orangehrms").getValue();
+        String CookieAfterLogout = driver.manage().getCookieNamed("orangehrm").getValue();
         // Check if a specific cookie exists
         Assert.assertFalse(CookieBeforeLogout.equals(CookieAfterLogout));
     }

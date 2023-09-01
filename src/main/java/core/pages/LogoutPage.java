@@ -13,24 +13,18 @@ public class LogoutPage extends BasePage {
         this.driver = driver;
     }
 
-    public static void ValidLogout(WebDriver driver) throws InterruptedException {
+    public static void ValidLogout(WebDriver driver) {
         Actions actions = new Actions(driver);
 
-        //Login with valid Creds
-        LoginPage.ValidLogin(driver);
         String CookieBeforeLogout = driver.manage().getCookieNamed("orangehrm").getValue();
 
         actions.findElementByXpath("//p[@class='oxd-userdropdown-name']").click();
         actions.findElementByXpath("//a[normalize-space()='Logout']").click();
 
-        String CookieAfterLogout = driver.manage().getCookieNamed("orangehrms").getValue();
+        String CookieAfterLogout = driver.manage().getCookieNamed("orangehrm").getValue();
         // Check if a specific cookie exists
         Assert.assertFalse(CookieBeforeLogout.equals(CookieAfterLogout));
     }
-
-
-
-
 
 
 }

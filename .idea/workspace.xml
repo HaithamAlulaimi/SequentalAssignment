@@ -171,7 +171,7 @@
   }
 }</component>
   <component name="RunManager" selected="TestNG.TheFullScenarioTest.TestingTheFullScenario">
-    <configuration name="AddUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddLeaveTest.addUserLeaveWithValidFData" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SequentalAssignment" />
       <extension name="coverage">
         <pattern>
@@ -180,25 +180,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddUserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddUserTest.addSystemUserWithoutUserName" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SequentalAssignment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddUserTest" />
-      <option name="METHOD_NAME" value="addSystemUserWithoutUserName" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddLeaveTest" />
+      <option name="METHOD_NAME" value="addUserLeaveWithValidFData" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -206,7 +189,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyInfoTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SequentalAssignment" />
       <extension name="coverage">
         <pattern>
@@ -215,7 +198,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.MyInfoTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -223,7 +206,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TheFullScenarioTest.AddAttachmentsToTheImmigrationSection" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyInfoTest.AddAttachmentsToTheImmigrationSectionValidScenario" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SequentalAssignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MyInfoTest" />
+      <option name="METHOD_NAME" value="AddAttachmentsToTheImmigrationSectionValidScenario" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheFullScenarioTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SequentalAssignment" />
       <extension name="coverage">
         <pattern>
@@ -233,8 +234,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.TheFullScenarioTest" />
-      <option name="METHOD_NAME" value="AddAttachmentsToTheImmigrationSection" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -262,10 +262,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TheFullScenarioTest.TestingTheFullScenario" />
-        <item itemvalue="TestNG.TheFullScenarioTest.AddAttachmentsToTheImmigrationSection" />
-        <item itemvalue="TestNG.AddUserTest.addSystemUserWithoutUserName" />
-        <item itemvalue="TestNG.AddUserTest" />
-        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.AddLeaveTest.addUserLeaveWithValidFData" />
+        <item itemvalue="TestNG.TheFullScenarioTest" />
+        <item itemvalue="TestNG.MyInfoTest.AddAttachmentsToTheImmigrationSectionValidScenario" />
+        <item itemvalue="TestNG.MyInfoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -302,5 +302,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Create Chrome WebDriver. &#10;- Build base classes." />
     <option name="LAST_COMMIT_MESSAGE" value="- Create Chrome WebDriver. &#10;- Build base classes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/AddLeaveTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
