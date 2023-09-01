@@ -3,8 +3,9 @@
 ### Introduction 
 This project is an assignment from SequenTial Company that focuses on front-end testing using Selenium -TestNG and the programming language is Java.
 
+### Note 
 
-#### The test script is structured into two distinct parts to ensure comprehensive testing coverage:
+ The test script is structured into two distinct parts to ensure comprehensive testing coverage:
 
 ##### Smoke Test (Main Area):
 
