@@ -1,10 +1,10 @@
 # SequentalAssignment
 
-# Introduction 
+### Introduction 
 This project is an assignment from SequenTial Company that focuses on front-end testing using Selenium -TestNG and the programming language is Java.
 
 
-# Getting Started
+### Getting Started
 Follow these steps to get started with this project. Make sure you have the following tools and dependencies installed:
 
 - [Bonigarcia WebDriverManager](https://github.com/bonigarcia/webdrivermanager): A library for automating WebDriver management.
