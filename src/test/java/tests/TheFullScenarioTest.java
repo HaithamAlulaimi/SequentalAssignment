@@ -42,7 +42,6 @@ public class TheFullScenarioTest {
         MyInfoPage.validAddImmigrationAttachment(driver);
         AddLeavePage.validAddUser(driver);
         BuzzPage.validBuzzPost(driver);
-
         LogoutPage.ValidLogout(driver);
     }
 }
