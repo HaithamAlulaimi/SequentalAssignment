@@ -11,7 +11,7 @@ Follow these steps to get started with this project. Make sure you have the foll
 - [TestNG](https://testng.org/): A testing framework for Java.
 - [Selenium WebDriver](https://www.selenium.dev/documentation/en/webdriver/): A tool for automating web applications.
 - [selenium-java](https://www.selenium.dev/downloads/): The Selenium Java library.
-
+- [Allure TestNG]([https://www.selenium.dev/downloads/](https://mvnrepository.com/artifact/io.qameta.allure/allure-testng)): The Allure TestNG Framework.
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:
