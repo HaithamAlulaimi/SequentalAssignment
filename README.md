@@ -1,8 +1,16 @@
 # SequentalAssignment
 
 ### Introduction 
-This project is an assignment from SequenTial Company that focuses on front-end testing using Selenium -TestNG and the programming language is Java.
+- This project is an assignment from SequenTial Company that focuses on front-end testing using Selenium -TestNG and the programming language is Java.
+- The test script is structured into two distinct parts to ensure comprehensive testing coverage:
 
+* Smoke Test (Main Area):
+
+The 'Smoke Test' section focuses on quickly verifying the core functionality and stability of the application's main area. This part aims to identify any critical issues or regressions in the essential features.
+It includes a subset of test cases that cover the fundamental functionalities that must work without major issues.
+
+* Full Scenario (Assignment):
+The 'Full Scenario' section comprises a comprehensive set of test cases that collectively cover the complete assignment requirements.
 
 ### Getting Started
 Follow these steps to get started with this project. Make sure you have the following tools and dependencies installed:
